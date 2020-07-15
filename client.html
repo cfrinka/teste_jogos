@@ -38,13 +38,13 @@
         renderScreen()
 
         function renderScreen(){
-            for (playerId in game.players) {
-                const player = game.players[playerId]
+            for (const playerID in game.players){
+                const player = game.players[playerID]
                 context.fillStyle = 'black'
-                content.fillRect(player.x, player.y, 1, 1)
+                context.fillRect(player.x, player.y, 1, 1)
             }
 
-            for (fruitId in game.fruits) {
+            for (const fruitId in game.fruits){
                 const fruit = game.fruits[fruitId]
                 context.fillStyle = 'green'
                 context.fillRect(fruit.x, fruit.y, 1, 1)
